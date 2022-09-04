@@ -73,7 +73,7 @@ impl Simulation {
         }
 
         let mass_air = self.capacity * DENSITY_AIR;
-        let new_temp = current_temp + dE_dot*60.0/(mass_air*C_V_AIR);
+        let new_temp = current_temp + dE_dot*1.0/(mass_air*C_V_AIR);
 
         self.history_queue.push_back(new_temp);
         if self.history_queue.len() > 1440 {
